@@ -1,0 +1,182 @@
+@keyframes rotation {
+    100% {transform: rotate(360deg);}
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(146, 190, 196);
+    color: black;
+    transition: all 1s ease 0s;
+}
+body.dark-mode {
+    color: white;
+    background-image: url(img/galaxy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s ease 0s;
+}
+.container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-width: 360px;
+}
+/*========== BULB ==========*/
+.bulb {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.up-part {
+    width: 3px;
+    height: 30px;
+    transform: translate(-50%);
+    background-color: rgb(63, 62, 62);
+    border-radius: 5px;
+}
+.down-part {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 232, 25);
+    box-shadow: 0 0 30px rgb(255, 213, 23);
+    z-index: 1;
+    transition: all 1s ease 0s;
+}
+.down-part.dark-mode {
+    background-color: rgba(255, 255, 255, 0.582);
+    box-shadow: none;
+    transition: all 1s ease 0s;
+}
+/*========== THEME BUTTON ==========*/
+.theme-btn {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 5px black;
+    background-color: black;
+    transition: all 1s ease 0s;
+}
+.theme-btn.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    box-shadow: 0 0 10px white;
+    background-color: white;
+    transition: all 1s ease 0s;
+}
+.point {
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    background-color: white;
+    cursor: pointer;
+    transition: all 1s ease 0s;
+}
+.point.dark-mode {
+    box-shadow: 0 0 5px black;
+    background-color: black;
+    transition: all 1s ease 0s;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+}
+/*========== THEME PLANETS ==========*/
+.sun {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url(img/sun.png);
+    background-size: contain;
+    animation: rotation 120s infinite linear;
+}
+.mercury {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(gif/mercury.gif);
+    background-size: contain;
+    box-shadow: 0 0 10px rgb(146, 150, 148);
+}
+.venus {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: url(gif/venus.gif);
+    background-size: contain;
+    box-shadow: 0 0 10px rgb(235, 192, 75);
+}
+.earth {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(gif/earth.gif);
+    background-size: contain;
+    box-shadow: 0 0 10px rgb(153, 186, 219);
+}
+.mars {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: url(gif/mars.gif);
+    background-size: contain;
+    box-shadow: 0 0 10px rgb(219, 133, 75);
+}
+.jupiter {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: url(gif/jupiter.gif);
+    background-size: contain;
+    box-shadow: 0 0 15px rgb(148, 147, 146);
+
+}
+.saturn {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: url(img/saturn.png);
+    background-size: contain;
+}
+.uranus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url(gif/uranus.gif);
+    background-size: contain;
+    box-shadow: 0 0 15px rgb(159, 177, 218);
+}
+.neptune {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: url(gif/neptune.gif);
+    background-size: contain;
+    box-shadow: 0 0 15px rgb(150, 172, 223);
+}
